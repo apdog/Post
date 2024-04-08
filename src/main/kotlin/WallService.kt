@@ -3,7 +3,8 @@ package org.example
 //сервис отвечающий за публикацию постов
 object WallService {
 
-    private var posts = ArrayList<Post>()
+    private var posts = emptyArray<Post>()
+
     // Переменная для хранения текущего идентификатора поста
     private var initialId = 1
     //метод для создания постов
@@ -13,7 +14,7 @@ object WallService {
     //возвращать пост с уже выставленным идентификатором.
     fun add(post: Post): Post {
         val newPost = post.copy(id = initialId++)
-        posts.add(newPost)
+        posts += newPost
         return newPost
     }
 
@@ -37,5 +38,11 @@ object WallService {
             println("Пост с ID " + post.id + " имеет " + post.likes.count + " лайка(ов)")
         }
     }
+
+    fun clear() {
+        posts = emptyArray()
+        initialId = 1
+    }
+
 
 }

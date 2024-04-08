@@ -3,7 +3,6 @@ package org.example
 import java.util.*
 
 fun main() {
-    val wallService = WallService
     val post1 = Post(
         fromId = 3559,
         date = Date(),
@@ -82,10 +81,11 @@ fun main() {
     )
 
     val updated = WallService.update(post3)
-    if (updated){
+    if (updated) {
         println("Пост успешно обновлен.")
     } else {
         println("Пост с указанным id не найден.")
     }
     WallService.printPosts()
- }
+
+}
