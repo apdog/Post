@@ -1,5 +1,5 @@
 package org.example
 
 data class Views(
-    val count: Int
+    val count: Int = 0
 )

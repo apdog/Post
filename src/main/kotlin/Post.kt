@@ -1,9 +1,11 @@
 package org.example
 
+import java.util.Date
+
 data class Post(
-    val id: Int, // Уникальный номер записи
+    var id: Int = 0, // Уникальный номер записи
     val fromId: Int, // ID автора записи
-    val date: Long, // Дата публикации записи
+    val date: Date, // Дата публикации записи
     val text: String, // Текст записи
     val friendsOnly: Boolean, // если запись видна только друзьям
     val comments: Comments, // Информация о комментариях
