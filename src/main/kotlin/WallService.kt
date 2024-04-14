@@ -35,7 +35,7 @@ object WallService {
 
     fun printPosts() {
         for (post in posts) {
-            println("Пост с ID " + post.id + " имеет " + post.likes.count + " лайка(ов)")
+            println("Пост с ID " + post.id + " имеет " + post.likes?.count + " лайка(ов)")
         }
     }
 
