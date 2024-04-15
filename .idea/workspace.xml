@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="875f6473-f9f7-4161-9d6e-2d57a7528d8b" name="Changes" comment="task 3">
+    <list default="true" id="875f6473-f9f7-4161-9d6e-2d57a7528d8b" name="Changes" comment="Attachments">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/attachments/Attachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/attachments/AudioAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/attachments/FileAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/attachments/PhotoAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/attachments/UrlAttachment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/attachments/VideoAttachment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Attachment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Comments.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Comments.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Likes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Likes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +30,32 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Data Class" />
         <option value="Kotlin Object" />
-        <option value="Kotlin Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="nullable" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -40,28 +67,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build Post.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Post [test jacocoTestReport].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alex.dev/Desktop/Homework/Post&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build Post.executor": "Run",
+    "Gradle.Post [test jacocoTestReport].executor": "Run",
+    "Gradle.WallServiceTest.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "Cherry-picking in Attachments",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Alex.dev/Desktop/Homework/Post/src/main/kotlin",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex.dev\Desktop\Homework\Post\src\main\kotlin" />
       <recent name="C:\Users\Alex.dev\Desktop\Homework\Post" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex.dev\Desktop\Homework\Post\src\main\kotlin\attachments" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="attachments" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
@@ -72,7 +106,7 @@
       <command value="./gradlew test jacocoTestReport" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.Post [test jacocoTestReport]">
     <configuration name="Post [test jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.Post [test jacocoTestReport]" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.WallServiceTest" />
       </list>
     </recent_temporary>
@@ -176,14 +210,61 @@
       <option name="project" value="LOCAL" />
       <updated>1712604290018</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nullable">
+      <option name="closed" value="true" />
+      <created>1713102344455</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713102344455</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Attachments" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="task 1" />
     <MESSAGE value="task 2" />
     <MESSAGE value="task 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 3" />
+    <MESSAGE value="Nullable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nullable" />
   </component>
 </project>
