@@ -82,7 +82,7 @@
     "last_opened_file_path": "C:/Users/Alex.dev/Desktop/Homework/Post/src/main/kotlin",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alex.dev\Desktop\Homework\Post\src\main\kotlin" />
@@ -163,6 +163,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.Post [test jacocoTestReport]" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.WallServiceTest" />
