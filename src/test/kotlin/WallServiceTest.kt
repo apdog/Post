@@ -16,18 +16,12 @@ class WallServiceTest {
             1,
             Date(),
             "Test post",
-            false,
-            Comments(0, false, false, false, false),
-            Likes(0, 0, false, false),
+            Comments(0),
+            Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
 
         // Добавляем пост
@@ -45,36 +39,24 @@ class WallServiceTest {
             1,
             Date(),
             "Test post 1",
-            false,
-            Comments(0, false, false, false, false),
-            Likes(0, 0, false, false),
+            Comments(0),
+            Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
         val post2 = Post(
             1,
             1,
             Date(),
             "Updated test post 1",
-            false,
-            Comments(0, false, false, false, false),
-            Likes(0, 0, false, false),
+            Comments(0),
+            Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
 
         // Добавляем первый пост
@@ -95,18 +77,12 @@ class WallServiceTest {
             1,
             Date(),
             "Test post",
-            false,
-            Comments(0, false, false, false, false),
-            Likes(0, 0, false, false),
+            Comments(0),
+            Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
 
         // Обновляем пост
