@@ -49,6 +49,10 @@ object WallService {
         }
     }
 
+    fun getPostById(postId: Int): Post? {
+        return posts.find { it.id == postId }
+    }
+
     fun createComment(postId: Int, comment: Comments): Comments {
         // проверка существует ли в массиве posts пост с ID равным postId
         val postIndex = posts.indexOfFirst { it.id == postId }
