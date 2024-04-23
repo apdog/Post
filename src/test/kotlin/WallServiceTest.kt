@@ -1,6 +1,7 @@
 import org.example.*
 import org.example.WallService.add
-import org.example.WallService.clear
+import org.example.WallService.clearComments
+import org.example.WallService.clearPosts
 import org.example.WallService.update
 import org.junit.Assert.*
 import org.junit.Before
@@ -17,7 +18,7 @@ class WallServiceTest {
             Date(),
             "Test post",
             false,
-            Comments(0, false, false, false, false),
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
@@ -46,7 +47,7 @@ class WallServiceTest {
             Date(),
             "Test post 1",
             false,
-            Comments(0, false, false, false, false),
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
@@ -64,7 +65,7 @@ class WallServiceTest {
             Date(),
             "Updated test post 1",
             false,
-            Comments(0, false, false, false, false),
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
@@ -77,8 +78,8 @@ class WallServiceTest {
             false
         )
 
-        // Добавляем первый пост
         add(post1)
+        add(post2)
 
         // Обновляем второй пост
         val updated = update(post2)
@@ -96,7 +97,7 @@ class WallServiceTest {
             Date(),
             "Test post",
             false,
-            Comments(0, false, false, false, false),
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
@@ -119,6 +120,7 @@ class WallServiceTest {
     @Before
     fun clearBeforeTest() {
         // Очищаем список постов перед каждым тестом
-        clear()
+        clearPosts()
+        clearComments()
     }
 }
