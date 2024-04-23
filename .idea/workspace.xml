@@ -23,6 +23,16 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -83,10 +93,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex.dev\Desktop\Homework\Post\src\main\kotlin" />
       <recent name="C:\Users\Alex.dev\Desktop\Homework\Post" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex.dev\Desktop\Homework\Post\src\main\kotlin\attachments" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="attachments" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
@@ -155,6 +172,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Post [test jacocoTestReport]" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.WallServiceTest" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -201,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712604290018</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nullable">
+      <option name="closed" value="true" />
+      <created>1713102344455</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713102344455</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +258,8 @@
     <MESSAGE value="task 1" />
     <MESSAGE value="task 2" />
     <MESSAGE value="task 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 3" />
+    <MESSAGE value="Nullable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nullable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

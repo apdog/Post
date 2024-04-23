@@ -22,13 +22,8 @@ class WallServiceTest {
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
 
         // Добавляем пост
@@ -51,13 +46,8 @@ class WallServiceTest {
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
         val post2 = Post(
             1,
@@ -69,13 +59,8 @@ class WallServiceTest {
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
 
         add(post1)
@@ -101,13 +86,8 @@ class WallServiceTest {
             Likes(0, 0, false, false),
             Reposts(0, false),
             Views(0),
+            false,
             ArrayList(),
-            false,
-            false,
-            false,
-            false,
-            false,
-            false
         )
 
         // Обновляем пост
