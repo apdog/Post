@@ -25,12 +25,12 @@ fun main() {
     )
 
     val post1 = Post(
+        id = 0,
         fromId = 3559,
         date = Date(),
-        text = "Текст поста",
-        comments = Comments(
-            count = 9602
-        ),
+        text = "mucius",
+        friendsOnly = false,
+        comments = null,
         likes = Likes(count = 8672, userLikes = 8887, canLike = false),
         reposts = Reposts(count = 8635, userReposted = false),
         views = Views(count = 8781),
@@ -38,29 +38,55 @@ fun main() {
         attachments = listOf(AudioAttachment(audio), FileAttachment(file)),
     )
     WallService.add(post1)
-    WallService.printPosts()
 
-//    val post3 = Post(
-//        id = 1,
-//        fromId = 6659,
-//        date = Date(),
-//        text = "et",
-//        comments = Comments(
-//            count = 4930,
-//        ),
-//        likes = Likes(count = 6750, userLikes = 7920, canLike = false),
-//        reposts = Reposts(count = 7912, userReposted = false),
-//        views = Views(count = 6958),
-//        isPinned = false,
-//        attachments = listOf(),
-//    )
-//
-//    val updated = WallService.update(post3)
-//    if (updated) {
-//        println("Пост успешно обновлен.")
-//    } else {
-//        println("Пост с указанным id не найден.")
-//    }
-//    WallService.printPosts()
+    val post2 = Post(
+        id = 0,
+        fromId = 53,
+        date = Date(),
+        text = "regenerate",
+        friendsOnly = true,
+        comments = null,
+        likes = Likes(count = 547, userLikes = 87, canLike = true),
+        reposts = Reposts(count = 54, userReposted = true),
+        views = Views(count = 874),
+        attachments = listOf(),
+        isPinned = true,
+    )
+
+    val post3 = Post(
+        id = 1,
+        fromId = 53,
+        date = Date(),
+        text = "dthfhfhfh",
+        friendsOnly = true,
+        comments = mutableListOf<Comments>(),
+        likes = Likes(count = 547, userLikes = 87, canLike = true),
+        reposts = Reposts(count = 54, userReposted = true),
+        views = Views(count = 874),
+        attachments = listOf(),
+        isPinned = true,
+    )
+    val comment = Comments(
+        id = 0,
+        text = "Челмедведосвин"
+    )
+
+    val comment2 = Comments(
+        id = 0,
+        text = "Карамба!"
+    )
+
+    val comment3 = Comments(
+        id = 0,
+        text = "Эх"
+    )
+    with(WallService){
+        add(post2)
+        createComment(1,comment)
+        createComment(1,comment2)
+        createComment(1,comment3)
+//        update(post3)
+        printPosts()
+    }
 
 }

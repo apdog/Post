@@ -1,6 +1,7 @@
 import org.example.*
 import org.example.WallService.add
-import org.example.WallService.clear
+import org.example.WallService.clearComments
+import org.example.WallService.clearPosts
 import org.example.WallService.update
 import org.junit.Assert.*
 import org.junit.Before
@@ -16,7 +17,8 @@ class WallServiceTest {
             1,
             Date(),
             "Test post",
-            Comments(0),
+            false,
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
@@ -39,7 +41,8 @@ class WallServiceTest {
             1,
             Date(),
             "Test post 1",
-            Comments(0),
+            false,
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
@@ -51,7 +54,8 @@ class WallServiceTest {
             1,
             Date(),
             "Updated test post 1",
-            Comments(0),
+            false,
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
@@ -59,8 +63,8 @@ class WallServiceTest {
             ArrayList(),
         )
 
-        // Добавляем первый пост
         add(post1)
+        add(post2)
 
         // Обновляем второй пост
         val updated = update(post2)
@@ -77,7 +81,8 @@ class WallServiceTest {
             1,
             Date(),
             "Test post",
-            Comments(0),
+            false,
+            comments = mutableListOf(Comments(0, "комментарий")),
             Likes(0, 0, false),
             Reposts(0, false),
             Views(0),
@@ -92,9 +97,54 @@ class WallServiceTest {
         assertFalse(updated)
     }
 
+    @Test
+    fun shouldAddCommentToExistingPost() {
+        // Создаем пост
+        val post = Post(
+            id = 1,
+            fromId = 1,
+            date = Date(),
+            text = "Test post",
+            friendsOnly = false,
+            comments = mutableListOf(),
+            likes = Likes(0, 0, false),
+            reposts = Reposts(0, false),
+            views = Views(0),
+            attachments = emptyList(),
+            isPinned = false,
+        )
+
+        // Добавляем пост
+        val addedPost = WallService.add(post)
+
+        // Создаем комментарий
+        val comment = Comments(
+            id = 1,
+            text = "Test comment"
+        )
+
+        // Добавляем комментарий к существующему посту
+        WallService.createComment(addedPost.id, comment)
+
+        // Проверяем, что комментарий добавлен к посту
+        val updatedPost = WallService.getPostById(addedPost.id)
+        assertEquals(1, updatedPost?.comments?.size)
+    }
+
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrowExceptionForNonExistingPost() {
+        // Пытаемся добавить комментарий к несуществующему посту
+        val comment = Comments(
+            id = 1,
+            text = "Test comment"
+        )
+        WallService.createComment(100, comment)
+    }
+
     @Before
     fun clearBeforeTest() {
         // Очищаем список постов перед каждым тестом
-        clear()
+        clearPosts()
+        clearComments()
     }
 }

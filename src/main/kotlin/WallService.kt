@@ -4,16 +4,20 @@ package org.example
 object WallService {
 
     private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comments>()
 
     // Переменная для хранения текущего идентификатора поста
-    private var initialId = 1
+    private var startPostsId = 1
+    private var startCommentsId = 0
     //метод для создания постов
 
     //Как он должен работать:
     //добавлять запись в массив, но при этом назначать посту уникальный среди всех постов идентификатор;
     //возвращать пост с уже выставленным идентификатором.
     fun add(post: Post): Post {
-        val newPost = post.copy(id = initialId++)
+        val newPost = post.copy(id = startPostsId++)
+        // Инициализируем пустой список комментариев для нового поста
+        newPost.comments = mutableListOf()
         posts += newPost
         return newPost
     }
@@ -26,7 +30,10 @@ object WallService {
     fun update(post: Post): Boolean {
         val index = posts.indexOfFirst { it.id == post.id }
         return if (index != -1) {
-            posts[index] = post
+            // Создаем копию обновленного поста
+            val updatedPost = post.copy()
+            // Заменяем старый пост на обновленный
+            posts[index] = updatedPost
             true
         } else {
             false
@@ -35,18 +42,39 @@ object WallService {
 
     fun printPosts() {
         for (post in posts) {
-//            println("Пост с ID " + post.id + " имеет " + post.likes?.count + " лайка(ов)")
-            with(post) {
-                println(
-                    "$id\n" + "$text\n" + "$comments\n" + "$likes\n" + "$reposts\n" + "$views\n" + "$attachments\n" + "$date\n"
-                )
+            println("ID Поста: ${post.id}, Комментариев: ${post.comments?.size}")
+            post.comments?.forEach { comment ->
+                println(" - Коммент ${comment.id}, Текст: ${comment.text}")
             }
         }
     }
 
-    fun clear() {
+    fun getPostById(postId: Int): Post? {
+        return posts.find { it.id == postId }
+    }
+
+    fun createComment(postId: Int, comment: Comments): Comments {
+        // проверка существует ли в массиве posts пост с ID равным postId
+        val postIndex = posts.indexOfFirst { it.id == postId }
+        if (postIndex != -1) {
+            // добавить комментарий в массив и возвращаем его
+            val newComment = comment.copy(id = posts[postIndex].comments?.size?.plus(1) ?: 0)
+            comments += newComment
+            posts[postIndex].comments?.add(newComment)
+            return newComment
+        } else {
+            throw PostNotFoundException("Пост с ID $postId не найден")
+        }
+    }
+
+    fun clearPosts() {
         posts = emptyArray()
-        initialId = 1
+        startPostsId = 0
+    }
+
+    fun clearComments() {
+        comments = emptyArray()
+        startCommentsId = 0
     }
 
 
